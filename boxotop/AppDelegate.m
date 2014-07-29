@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
             
@@ -18,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [Crashlytics startWithAPIKey:@"b1e08f251d6f0533ab1c64d211416c5d98d8b346"];
+    
     return YES;
 }
 
