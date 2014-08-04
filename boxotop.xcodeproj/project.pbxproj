@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B0AE9F115541480DACAF3CDA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0AE51FAF404E57B55D6883 /* libPods.a */; };
+		B54931DE19885C26009FE77B /* MainViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B54931DD19885C26009FE77B /* MainViewControllerTest.m */; };
 		B5AE4E6F1987965500A7CC50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AE4E6E1987965500A7CC50 /* main.m */; };
 		B5AE4E721987965500A7CC50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AE4E711987965500A7CC50 /* AppDelegate.m */; };
 		B5AE4E751987965500A7CC50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AE4E741987965500A7CC50 /* ViewController.m */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		8E0AE51FAF404E57B55D6883 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF13177582944D74BAA6612B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		B54931DD19885C26009FE77B /* MainViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerTest.m; sourceTree = "<group>"; };
 		B5AE4E691987965500A7CC50 /* boxotop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boxotop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AE4E6D1987965500A7CC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5AE4E6E1987965500A7CC50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				B5AE4E851987965500A7CC50 /* boxotopTests.m */,
 				B5AE4E831987965500A7CC50 /* Supporting Files */,
+				B54931DD19885C26009FE77B /* MainViewControllerTest.m */,
 			);
 			path = boxotopTests;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5AE4E861987965500A7CC50 /* boxotopTests.m in Sources */,
+				B54931DE19885C26009FE77B /* MainViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
