@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Posters.h"
+
 #import <Mantle.h>
+
 
 @interface Movie : MTLModel <MTLJSONSerializing>
 
@@ -15,5 +18,6 @@
 @property (nonatomic, strong) NSString *titleMovie;
 @property (nonatomic, strong) NSNumber *year;
 @property (nonatomic, strong) NSString *synopsis;
+@property (nonatomic, strong) Posters *posters;
 
 @end

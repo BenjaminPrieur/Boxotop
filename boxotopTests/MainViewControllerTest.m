@@ -32,10 +32,6 @@
     [super tearDown];
 }
 
-- (void)testListBoxOfficeMovieNotEmpty
-{
-    XCTAssertNotNil([_sut getCurrentBoxOffice], @"box office not empty");
-}
 
 - (void)testTableViewIsLinked
 {
@@ -50,13 +46,6 @@
 - (void)testTableViewDataSourceLinked
 {
     XCTAssertNotNil([_sut.tableView dataSource], @"tableView dataSource linked");
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
 }
 
 //- (void)testSomething {

@@ -9,13 +9,15 @@
 #import "ViewController.h"
 #import "MovieTableViewCell.h"
 #import "HomeViewModel.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "UIImageView+LBBlurredImage.h"
 
 @interface ViewController ()
 
 @property (nonatomic, strong) HomeViewModel *viewModel;
+
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -46,13 +48,15 @@
     [[RACObserve(self.viewModel, movies)
      deliverOn:RACScheduler.mainThreadScheduler]
      subscribeNext:^(NSArray *newMovies) {
-        [self.tableView reloadData];
+         [self.spinner stopAnimating];
+         [self.tableView reloadData];
     }];
 }
 
 - (void)reloadMovies
 {
-    [_viewModel updateMovies];
+    [self.spinner startAnimating];
+    [self.viewModel updateMovies];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -93,8 +97,12 @@
 {
     MovieTableViewCell *cell = (MovieTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    [cell.lblTitle setText:[[_viewModel.movies objectAtIndex:indexPath.row] titleMovie]];
-    [cell.imageViewThumbnail sd_setImageWithURL:nil placeholderImage:nil options:SDWebImageProgressiveDownload];
+    Movie *movie = [_viewModel.movies objectAtIndex:indexPath.row];
+    
+    [cell.lblTitle setText:movie.titleMovie];
+    [cell.imageViewThumbnail sd_setImageWithURL:[NSURL URLWithString:movie.posters.thumbnail]
+                               placeholderImage:nil
+                                        options:SDWebImageProgressiveDownload];
     
     return cell;
 }

@@ -1,5 +1,5 @@
 //
-//  Poster.h
+//  Posters.h
 //  boxotop
 //
 //  Created by benjamin prieur on 06/08/2014.
@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Mantle/Mantle.h>
 
-@interface Poster : NSObject
+@interface Posters : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, strong) NSString *thumbnail;
 @property (nonatomic, strong) NSString *profile;

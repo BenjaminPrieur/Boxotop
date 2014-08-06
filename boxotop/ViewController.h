@@ -13,6 +13,7 @@
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) IBOutlet UIImageView *imageViewBG;
 @property (nonatomic, strong) IBOutlet UILabel *lblTitle;
+@property (nonatomic, strong) IBOutlet UIButton *btnReload;
 
 @end
 

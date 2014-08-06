@@ -21,7 +21,8 @@
 		B5B7B9AC19922D1000D3E0E8 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7B9AB19922D1000D3E0E8 /* Movie.m */; };
 		B5B7B9B01992383300D3E0E8 /* WebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7B9AF1992383300D3E0E8 /* WebServiceManager.m */; };
 		B5B7B9B5199258A500D3E0E8 /* BPLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7B9B4199258A500D3E0E8 /* BPLog.m */; };
-		B5B7B9B81992850000D3E0E8 /* Poster.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7B9B71992850000D3E0E8 /* Poster.m */; };
+		B5B7B9B81992850000D3E0E8 /* Posters.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7B9B71992850000D3E0E8 /* Posters.m */; };
+		B5B7B9BA19928A7600D3E0E8 /* HomeViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7B9B919928A7600D3E0E8 /* HomeViewModelTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +63,9 @@
 		B5B7B9B11992580400D3E0E8 /* boxotop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "boxotop-Prefix.pch"; sourceTree = "<group>"; };
 		B5B7B9B3199258A500D3E0E8 /* BPLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPLog.h; sourceTree = "<group>"; };
 		B5B7B9B4199258A500D3E0E8 /* BPLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPLog.m; sourceTree = "<group>"; };
-		B5B7B9B61992850000D3E0E8 /* Poster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poster.h; sourceTree = "<group>"; };
-		B5B7B9B71992850000D3E0E8 /* Poster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poster.m; sourceTree = "<group>"; };
+		B5B7B9B61992850000D3E0E8 /* Posters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Posters.h; sourceTree = "<group>"; };
+		B5B7B9B71992850000D3E0E8 /* Posters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Posters.m; sourceTree = "<group>"; };
+		B5B7B9B919928A7600D3E0E8 /* HomeViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewModelTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				B5AE4E851987965500A7CC50 /* boxotopTests.m */,
 				B5AE4E831987965500A7CC50 /* Supporting Files */,
 				B54931DD19885C26009FE77B /* MainViewControllerTest.m */,
+				B5B7B9B919928A7600D3E0E8 /* HomeViewModelTest.m */,
 			);
 			path = boxotopTests;
 			sourceTree = "<group>";
@@ -193,8 +196,8 @@
 			children = (
 				B5B7B9AA19922D1000D3E0E8 /* Movie.h */,
 				B5B7B9AB19922D1000D3E0E8 /* Movie.m */,
-				B5B7B9B61992850000D3E0E8 /* Poster.h */,
-				B5B7B9B71992850000D3E0E8 /* Poster.m */,
+				B5B7B9B61992850000D3E0E8 /* Posters.h */,
+				B5B7B9B71992850000D3E0E8 /* Posters.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				B5AE4E7B1987965500A7CC50 /* Sources */,
 				B5AE4E7C1987965500A7CC50 /* Frameworks */,
 				B5AE4E7D1987965500A7CC50 /* Resources */,
+				B5B7B9BB19928D8E00D3E0E8 /* Copy Pods ressources */,
 			);
 			buildRules = (
 			);
@@ -358,6 +362,20 @@
 			shellPath = /bin/sh;
 			shellScript = "./Crashlytics.framework/run b1e08f251d6f0533ab1c64d211416c5d98d8b346 17cdb48e2c854a2c4ca3d9dc02a9dbbcc36acf465c022fb052565dc850a05e1d";
 		};
+		B5B7B9BB19928D8E00D3E0E8 /* Copy Pods ressources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods ressources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -372,7 +390,7 @@
 				B5B7B9A3199226B000D3E0E8 /* MovieTableViewCell.m in Sources */,
 				B5B7B9A91992296100D3E0E8 /* HomeViewModel.m in Sources */,
 				B5B7B9B5199258A500D3E0E8 /* BPLog.m in Sources */,
-				B5B7B9B81992850000D3E0E8 /* Poster.m in Sources */,
+				B5B7B9B81992850000D3E0E8 /* Posters.m in Sources */,
 				B5AE4E6F1987965500A7CC50 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5B7B9BA19928A7600D3E0E8 /* HomeViewModelTest.m in Sources */,
 				B5AE4E861987965500A7CC50 /* boxotopTests.m in Sources */,
 				B54931DE19885C26009FE77B /* MainViewControllerTest.m in Sources */,
 			);
@@ -533,9 +552,17 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa\"",
+				);
 				INFOPLIST_FILE = boxotopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
+				OTHER_CFLAGS = "";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -550,9 +577,17 @@
 					"$(inherited)",
 				);
 				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa\"",
+				);
 				INFOPLIST_FILE = boxotopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};

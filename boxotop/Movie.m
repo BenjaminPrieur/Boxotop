@@ -16,8 +16,14 @@
              @"identifier": @"id",
              @"titleMovie": @"title",
              @"year": @"year",
-             @"synopsis": @"synopsis"
+             @"synopsis": @"synopsis",
+             @"posters": @"posters"
              };
+}
+
++ (NSValueTransformer *)postersJSONTransformer
+{
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:[Posters class]];
 }
 
 @end
