@@ -16,6 +16,12 @@
 		B5AE4E7A1987965500A7CC50 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AE4E791987965500A7CC50 /* Images.xcassets */; };
 		B5AE4E861987965500A7CC50 /* boxotopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AE4E851987965500A7CC50 /* boxotopTests.m */; };
 		B5AE4E911987986B00A7CC50 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5AE4E901987986B00A7CC50 /* Crashlytics.framework */; };
+		B5B7B9A3199226B000D3E0E8 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7B9A2199226B000D3E0E8 /* MovieTableViewCell.m */; };
+		B5B7B9A91992296100D3E0E8 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7B9A81992296100D3E0E8 /* HomeViewModel.m */; };
+		B5B7B9AC19922D1000D3E0E8 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7B9AB19922D1000D3E0E8 /* Movie.m */; };
+		B5B7B9B01992383300D3E0E8 /* WebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7B9AF1992383300D3E0E8 /* WebServiceManager.m */; };
+		B5B7B9B5199258A500D3E0E8 /* BPLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7B9B4199258A500D3E0E8 /* BPLog.m */; };
+		B5B7B9B81992850000D3E0E8 /* Poster.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7B9B71992850000D3E0E8 /* Poster.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,19 @@
 		B5AE4E841987965500A7CC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5AE4E851987965500A7CC50 /* boxotopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = boxotopTests.m; sourceTree = "<group>"; };
 		B5AE4E901987986B00A7CC50 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		B5B7B9A1199226B000D3E0E8 /* MovieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
+		B5B7B9A2199226B000D3E0E8 /* MovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
+		B5B7B9A71992296100D3E0E8 /* HomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
+		B5B7B9A81992296100D3E0E8 /* HomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
+		B5B7B9AA19922D1000D3E0E8 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		B5B7B9AB19922D1000D3E0E8 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		B5B7B9AE1992383300D3E0E8 /* WebServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceManager.h; sourceTree = "<group>"; };
+		B5B7B9AF1992383300D3E0E8 /* WebServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceManager.m; sourceTree = "<group>"; };
+		B5B7B9B11992580400D3E0E8 /* boxotop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "boxotop-Prefix.pch"; sourceTree = "<group>"; };
+		B5B7B9B3199258A500D3E0E8 /* BPLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPLog.h; sourceTree = "<group>"; };
+		B5B7B9B4199258A500D3E0E8 /* BPLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPLog.m; sourceTree = "<group>"; };
+		B5B7B9B61992850000D3E0E8 /* Poster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poster.h; sourceTree = "<group>"; };
+		B5B7B9B71992850000D3E0E8 /* Poster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poster.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +120,13 @@
 			children = (
 				B5AE4E701987965500A7CC50 /* AppDelegate.h */,
 				B5AE4E711987965500A7CC50 /* AppDelegate.m */,
-				B5AE4E731987965500A7CC50 /* ViewController.h */,
-				B5AE4E741987965500A7CC50 /* ViewController.m */,
 				B5AE4E761987965500A7CC50 /* Main.storyboard */,
+				B5B7B9A4199228F500D3E0E8 /* View */,
+				B5B7B9A5199228FC00D3E0E8 /* ModelView */,
+				B5B7B9A61992290800D3E0E8 /* Model */,
+				B5B7B9AD1992381B00D3E0E8 /* Manager */,
 				B5AE4E791987965500A7CC50 /* Images.xcassets */,
+				B5B7B9B21992587E00D3E0E8 /* Utilities */,
 				B5AE4E6C1987965500A7CC50 /* Supporting Files */,
 			);
 			path = boxotop;
@@ -115,6 +137,7 @@
 			children = (
 				B5AE4E6D1987965500A7CC50 /* Info.plist */,
 				B5AE4E6E1987965500A7CC50 /* main.m */,
+				B5B7B9B11992580400D3E0E8 /* boxotop-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -135,6 +158,63 @@
 				B5AE4E841987965500A7CC50 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5B7B9A01992268F00D3E0E8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B5B7B9A1199226B000D3E0E8 /* MovieTableViewCell.h */,
+				B5B7B9A2199226B000D3E0E8 /* MovieTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		B5B7B9A4199228F500D3E0E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5B7B9A01992268F00D3E0E8 /* Cell */,
+				B5AE4E731987965500A7CC50 /* ViewController.h */,
+				B5AE4E741987965500A7CC50 /* ViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B5B7B9A5199228FC00D3E0E8 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				B5B7B9A71992296100D3E0E8 /* HomeViewModel.h */,
+				B5B7B9A81992296100D3E0E8 /* HomeViewModel.m */,
+			);
+			name = ModelView;
+			sourceTree = "<group>";
+		};
+		B5B7B9A61992290800D3E0E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5B7B9AA19922D1000D3E0E8 /* Movie.h */,
+				B5B7B9AB19922D1000D3E0E8 /* Movie.m */,
+				B5B7B9B61992850000D3E0E8 /* Poster.h */,
+				B5B7B9B71992850000D3E0E8 /* Poster.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B5B7B9AD1992381B00D3E0E8 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B5B7B9AE1992383300D3E0E8 /* WebServiceManager.h */,
+				B5B7B9AF1992383300D3E0E8 /* WebServiceManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		B5B7B9B21992587E00D3E0E8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B5B7B9B3199258A500D3E0E8 /* BPLog.h */,
+				B5B7B9B4199258A500D3E0E8 /* BPLog.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,8 +365,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5B7B9AC19922D1000D3E0E8 /* Movie.m in Sources */,
 				B5AE4E751987965500A7CC50 /* ViewController.m in Sources */,
+				B5B7B9B01992383300D3E0E8 /* WebServiceManager.m in Sources */,
 				B5AE4E721987965500A7CC50 /* AppDelegate.m in Sources */,
+				B5B7B9A3199226B000D3E0E8 /* MovieTableViewCell.m in Sources */,
+				B5B7B9A91992296100D3E0E8 /* HomeViewModel.m in Sources */,
+				B5B7B9B5199258A500D3E0E8 /* BPLog.m in Sources */,
+				B5B7B9B81992850000D3E0E8 /* Poster.m in Sources */,
 				B5AE4E6F1987965500A7CC50 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +494,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PREFIX_HEADER = "boxotop/boxotop-Prefix.pch";
 				INFOPLIST_FILE = boxotop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -425,6 +512,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PREFIX_HEADER = "boxotop/boxotop-Prefix.pch";
 				INFOPLIST_FILE = boxotop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -440,6 +528,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -460,6 +549,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = boxotopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;

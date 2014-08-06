@@ -7,8 +7,15 @@
 //
 
 #import "ViewController.h"
+#import "MovieTableViewCell.h"
+#import "HomeViewModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
+#import "UIImageView+LBBlurredImage.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) HomeViewModel *viewModel;
 
 @end
 
@@ -18,12 +25,39 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self initView];
+    self.viewModel = [[HomeViewModel alloc] init];
+    [self setupObservers];
+    
+    [self.imageViewBG setImageToBlur:[UIImage imageNamed:@"DefaultBG"]
+                        blurRadius:kLBBlurredImageDefaultBlurRadius
+                   completionBlock:^(){
+                       BPLog(@"The blurred image has been set");
+                   }];
 }
 
-- (void)initView
+- (void)viewDidAppear:(BOOL)animated
 {
-    _boxOffice = [[NSArray alloc] init];
+    [super viewDidAppear:animated];
+    [self reloadMovies];
+}
+
+- (void)setupObservers
+{
+    [[RACObserve(self.viewModel, movies)
+     deliverOn:RACScheduler.mainThreadScheduler]
+     subscribeNext:^(NSArray *newMovies) {
+        [self.tableView reloadData];
+    }];
+}
+
+- (void)reloadMovies
+{
+    [_viewModel updateMovies];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,16 +65,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSArray*)getCurrentBoxOffice
-{
-    return _boxOffice;
-}
-
 #pragma mark - IBAction
 
-- (IBAction)actoin_demoTDD:(id)sender
+- (IBAction)actoin_reloadMovies:(id)sender
 {
-    NSLog(@"Touch Up Inside");
+    [self reloadMovies];
 }
 
 #pragma mark - UITableViewDataSource & UITableViewDelegate
@@ -52,24 +81,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return [_viewModel.movies count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44;
+    return 125;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    MovieTableViewCell *cell = (MovieTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    if (!cell)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    }
-    
-    [cell.textLabel setText:[NSString stringWithFormat:@"Cell at index : %d", indexPath.row]];
+    [cell.lblTitle setText:[[_viewModel.movies objectAtIndex:indexPath.row] titleMovie]];
+    [cell.imageViewThumbnail sd_setImageWithURL:nil placeholderImage:nil options:SDWebImageProgressiveDownload];
     
     return cell;
 }
